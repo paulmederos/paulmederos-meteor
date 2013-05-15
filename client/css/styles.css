@@ -2520,5 +2520,7 @@ b {
   /* line 317, ../sass/_default.scss */
   .internet-card p {
     font-size: .7em;
+    line-height: 1.5;
+    color: #aaa;
   }
 }
