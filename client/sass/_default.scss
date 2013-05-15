@@ -64,11 +64,6 @@ $action_link_color: #FF7F66;
   background-size: $width $height;
 }
 
-@mixin retina-sprite {
-  background-image: url($sprite_url_2x);
-  @include bg-size(1000px, 150px);
-}
-
 // Silly function to divide the width and height to save me 2 seconds
 // whenever I need to calculate the halved retina background position
 @function double-pos($w, $h) { @return $w*2 $h*2; }
@@ -95,6 +90,10 @@ b { font-weight:600; }
   width:79.6%;
   max-width:796px;
   margin:0 auto;
+
+  @include mq-small {
+    width:92%;
+  }
 }
 
 .group:before,
@@ -200,9 +199,10 @@ b { font-weight:600; }
   }
 
   @include mq-small {
-    font-size: 1.2em;
+    font-size: 1em;
     width:86%;
     padding:1.5em 7%;
+    line-height:1.4;
   }
 }
 
